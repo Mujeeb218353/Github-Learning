@@ -97,7 +97,6 @@ git switch -c feature-name
 git branch new-branch source-branch
 ```
 
-
 ### Merge a Branch
 ```bash
 git merge feature-name
@@ -107,6 +106,46 @@ git merge feature-name
 ```bash
 git branch -d feature-name
 ```
+
+### 📋 List All Branches
+```bash
+# Local branches
+git branch
+
+# Local + remote branches
+git branch -a
+```
+
+### 🚀 Push Local Branch to Remote
+> Publish your local branch to GitHub for the first time
+```bash
+git push -u origin branch-name
+```
+
+### 🔍 Check Tracking Connection
+> See which local branches are connected to which remote branches
+```bash
+git branch -vv
+```
+
+---
+
+### 📡 Set Upstream for Existing Branch
+> Already pushed but forgot `-u`? Link them manually
+```bash
+git branch --set-upstream-to=origin/branch-name branch-name
+```
+
+### ⬇️ Pull a Remote Branch Locally
+> Someone else created a branch on GitHub — grab it locally
+```bash
+# Fetch all remote branches first
+git fetch origin
+
+# Then switch to it (Git auto-tracks it)
+git switch branch-name
+```
+
 ## ☁️ Remote & GitHub
 
 ### Connect to GitHub
