@@ -43,7 +43,7 @@ git add filename.txt
 ````
 
 ### Unstage a File
-> Oops — remove a file from staging
+> Oops, — remove a file from staging
 ````bash
 git restore --staged filename.txt
 ````
@@ -69,32 +69,44 @@ git commit --amend -m "corrected message"
 ## 🌿 Working with Branches
 
 ### Create a New Branch
-````bash
+```bash
 git branch feature-name
-````
+```
 
 ### Switch to a Branch
-````bash
+```bash
+# Old way
 git checkout feature-name
-````
+
+# ✅ Modern way (Git 2.23+)
+git switch feature-name
+```
 
 ### Create + Switch in One Step
-````bash
+```bash
+# Old way
 git checkout -b feature-name
-````
+
+# ✅ Modern way
+git switch -c feature-name
+```
+
+### Create a Branch from Another Branch (without switching)
+> Stay on your current branch while creating a new one from a specific branch
+```bash
+git branch new-branch source-branch
+```
+
 
 ### Merge a Branch
-````bash
+```bash
 git merge feature-name
-````
+```
 
 ### Delete a Branch
-````bash
+```bash
 git branch -d feature-name
-````
-
----
-
+```
 ## ☁️ Remote & GitHub
 
 ### Connect to GitHub
@@ -121,13 +133,12 @@ git clone https://github.com/username/repo.git
 
 ## 🧙 Pro Tips
 
-| Command | What it does |
-|---|---|
-| `git diff` | See unstaged changes |
-| `git stash` | Save work without committing |
-| `git stash pop` | Bring stashed work back |
+| Command                 | What it does                        |
+|-------------------------|-------------------------------------|
+| `git diff`              | See unstaged changes                |
+| `git stash`             | Save work without committing        |
+| `git stash pop`         | Bring stashed work back             |
 | `git reset --hard HEAD` | Undo everything back to last commit |
-
 ---
 
 > 💡 **Golden rule:** Commit early, commit often. Every commit is a save point you can return to.
