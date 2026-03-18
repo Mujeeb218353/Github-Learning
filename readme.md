@@ -1,1 +1,133 @@
-## Hello, Git!
+# 🚀 Git & GitHub — The Complete Cheat Sheet
+
+---
+
+## 🎯 Starting Your Journey
+
+### Initialize a Repository
+> Turn any folder into a Git-tracked project
+````bash
+git init
+````
+
+---
+
+## 📋 Staying Informed
+
+### Check File Status
+> See what's changed, staged, or untracked
+````bash
+git status
+````
+
+### View Commit History
+> See a log of all past commits
+````bash
+git log --oneline
+````
+
+---
+
+## ➕ Staging Changes
+
+### Add All Files
+> Stage everything in the current folder
+````bash
+git add .
+````
+
+### Add a Specific File
+> Stage only what you choose
+````bash
+git add filename.txt
+````
+
+### Unstage a File
+> Oops — remove a file from staging
+````bash
+git restore --staged filename.txt
+````
+
+---
+
+## 💾 Saving Your Work
+
+### Commit Changes
+> Snapshot your staged files with a message
+````bash
+git commit -m "your message here"
+````
+
+### Amend Last Commit
+> Fix a typo in your last commit message
+````bash
+git commit --amend -m "corrected message"
+````
+
+---
+
+## 🌿 Working with Branches
+
+### Create a New Branch
+````bash
+git branch feature-name
+````
+
+### Switch to a Branch
+````bash
+git checkout feature-name
+````
+
+### Create + Switch in One Step
+````bash
+git checkout -b feature-name
+````
+
+### Merge a Branch
+````bash
+git merge feature-name
+````
+
+### Delete a Branch
+````bash
+git branch -d feature-name
+````
+
+---
+
+## ☁️ Remote & GitHub
+
+### Connect to GitHub
+````bash
+git remote add origin https://github.com/username/repo.git
+````
+
+### Push to GitHub
+````bash
+git push -u origin main
+````
+
+### Pull Latest Changes
+````bash
+git pull origin main
+````
+
+### Clone a Repository
+````bash
+git clone https://github.com/username/repo.git
+````
+
+---
+
+## 🧙 Pro Tips
+
+| Command | What it does |
+|---|---|
+| `git diff` | See unstaged changes |
+| `git stash` | Save work without committing |
+| `git stash pop` | Bring stashed work back |
+| `git reset --hard HEAD` | Undo everything back to last commit |
+
+---
+
+> 💡 **Golden rule:** Commit early, commit often. Every commit is a save point you can return to.
