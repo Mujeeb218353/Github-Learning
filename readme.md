@@ -6,9 +6,9 @@
 
 ### Initialize a Repository
 > Turn any folder into a Git-tracked project
-```bash
+````bash
 git init
-```
+````
 
 ---
 
@@ -16,15 +16,15 @@ git init
 
 ### Check File Status
 > See what's changed, staged, or untracked
-```bash
+````bash
 git status
-```
+````
 
 ### View Commit History
 > See a log of all past commits
-```bash
+````bash
 git log --oneline
-```
+````
 
 ---
 
@@ -32,21 +32,21 @@ git log --oneline
 
 ### Add All Files
 > Stage everything in the current folder
-```bash
+````bash
 git add .
-```
+````
 
 ### Add a Specific File
 > Stage only what you choose
-```bash
+````bash
 git add filename.txt
-```
+````
 
 ### Unstage a File
-> Oops — remove a file from staging
-```bash
+> Oops, — remove a file from staging
+````bash
 git restore --staged filename.txt
-```
+````
 
 ---
 
@@ -54,60 +54,15 @@ git restore --staged filename.txt
 
 ### Commit Changes
 > Snapshot your staged files with a message
-```bash
+````bash
 git commit -m "your message here"
-```
+````
 
 ### Amend Last Commit
 > Fix a typo in your last commit message
-```bash
+````bash
 git commit --amend -m "corrected message"
-```
-
----
-
-## ⏪ Reset — Undoing Commits
-
-All three modes move HEAD back to a commit. The difference is what happens to your files and staged changes.
-
-### --soft
-> Undoes the commit. Changes stay **staged**, ready to re-commit.
-```bash
-git reset --soft HEAD~1
-```
-- ✅ Commit gone
-- ✅ Changes still staged
-- ✅ Files untouched
-
-### --mixed (default)
-> Undoes the commit and **unstages** changes. Files are untouched.
-```bash
-git reset HEAD~1
-# same as:
-git reset --mixed HEAD~1
-```
-- ✅ Commit gone
-- ⚠️ Changes unstaged
-- ✅ Files untouched
-
-### --hard
-> Wipes the commit **and all changes**. Cannot be undone easily.
-```bash
-git reset --hard HEAD~1
-```
-- ✅ Commit gone
-- ❌ Staged changes lost
-- ❌ File changes wiped
-
-### Quick Reference
-
-| Flag | Commit | Staging area | Working files |
-|------|--------|--------------|---------------|
-| `--soft` | removed | kept staged | untouched |
-| `--mixed` | removed | cleared | untouched |
-| `--hard` | removed | cleared | wiped |
-
-> 💡 Use `HEAD~2` to go back 2 commits, `HEAD~3` for 3, etc. Or pass a commit hash: `git reset --soft abc1234`
+````
 
 ---
 
@@ -152,7 +107,7 @@ git merge feature-name
 git branch -d feature-name
 ```
 
-### List All Branches
+### 📋 List All Branches
 ```bash
 # Local branches
 git branch
@@ -161,25 +116,27 @@ git branch
 git branch -a
 ```
 
-### Push Local Branch to Remote
+### 🚀 Push Local Branch to Remote
 > Publish your local branch to GitHub for the first time
 ```bash
 git push -u origin branch-name
 ```
 
-### Check Tracking Connection
+### 🔍 Check Tracking Connection
 > See which local branches are connected to which remote branches
 ```bash
 git branch -vv
 ```
 
-### Set Upstream for Existing Branch
+---
+
+### 📡 Set Upstream for Existing Branch
 > Already pushed but forgot `-u`? Link them manually
 ```bash
 git branch --set-upstream-to=origin/branch-name branch-name
 ```
 
-### Pull a Remote Branch Locally
+### ⬇️ Pull a Remote Branch Locally
 > Someone else created a branch on GitHub — grab it locally
 ```bash
 # Fetch all remote branches first
@@ -189,41 +146,38 @@ git fetch origin
 git switch branch-name
 ```
 
----
-
 ## ☁️ Remote & GitHub
 
 ### Connect to GitHub
-```bash
+````bash
 git remote add origin https://github.com/username/repo.git
-```
+````
 
 ### Push to GitHub
-```bash
+````bash
 git push -u origin main
-```
+````
 
 ### Pull Latest Changes
-```bash
+````bash
 git pull origin main
-```
+````
 
 ### Clone a Repository
-```bash
+````bash
 git clone https://github.com/username/repo.git
-```
+````
 
 ---
 
 ## 🧙 Pro Tips
 
-| Command | What it does |
-|---------|--------------|
-| `git diff` | See unstaged changes |
-| `git stash` | Save work without committing |
-| `git stash pop` | Bring stashed work back |
+| Command                 | What it does                        |
+|-------------------------|-------------------------------------|
+| `git diff`              | See unstaged changes                |
+| `git stash`             | Save work without committing        |
+| `git stash pop`         | Bring stashed work back             |
 | `git reset --hard HEAD` | Undo everything back to last commit |
-
 ---
 
 > 💡 **Golden rule:** Commit early, commit often. Every commit is a save point you can return to.
