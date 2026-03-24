@@ -3,4 +3,4 @@ console.log("Hello Github!");
 console.log("Hello dev-mujeeb!");
 console.log("This is a bad code.");
 
-console.log("Trying revert.")
+console.log("Trying revert")
